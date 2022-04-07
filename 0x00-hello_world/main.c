@@ -7,5 +7,6 @@
  */
 int main(void)
 { 
+ 	printf("HI Salmon\n");
 	return (0);
 }
