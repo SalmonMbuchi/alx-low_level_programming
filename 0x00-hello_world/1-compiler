@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c $CFILE -o two.o
+gcc -c $CFILE -o link.o 
