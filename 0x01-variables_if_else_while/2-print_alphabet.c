@@ -3,10 +3,11 @@
 /**
  * main - prints the alphabet
  *
- * Description: prints all the letters in the alphabet in lowercase 
+ * Description: prints all the letters in the alphabet in lowercase
  *
- * * Return: Always 0 (Success)
- * */
+ *Return: Always 0 (Success)
+ *
+ */
 int main(void)
 {
 	int AZ;
