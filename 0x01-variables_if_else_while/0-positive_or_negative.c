@@ -5,6 +5,7 @@
 
 /*Entry pooint of our program*/
 int main(void)
+/*Entry point for main program*/
 {
 	int n;
 
