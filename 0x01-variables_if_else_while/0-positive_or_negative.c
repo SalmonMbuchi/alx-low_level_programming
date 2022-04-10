@@ -4,8 +4,7 @@
 /*Check whether a number is positive or negative*/
 
 /*Entry pooint of our program*/
-int main(void)
-/*Entry point for main program*/
+int main(void)/*Entry point for our code*/
 {
 	int n;
 
