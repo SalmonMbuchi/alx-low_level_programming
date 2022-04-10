@@ -4,7 +4,7 @@
 /**
  *main function - entry point
  *
- *Description: checks whether a number is poditive, negative or zero
+ *Description: checks whether a number is poditive, negative or zero which must  *be  followed by a newline 
  *
  *Return: Always 0(Success)
  */
