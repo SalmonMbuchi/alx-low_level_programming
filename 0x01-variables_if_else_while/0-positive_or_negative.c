@@ -4,7 +4,8 @@
 /**
  *main: Determine if a number is 0, positive or negative
  *
- *Entry pooint of our program
+ *Description: checks whether a number is poditive, negative or zero
+ *Return: Always 0(Success:
  */
 
 int main(void)
