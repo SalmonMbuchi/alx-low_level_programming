@@ -15,5 +15,6 @@ int main(void)
 	{
 		putchar(AZ);
 	}
+	putchar('\n');
 	return (0);
 }
