@@ -3,7 +3,7 @@
 /**
  * main - uppercase and lowercase
  *
- * Description: prints the alphabet in lowercase, and then in uppercase, followed by a new line.
+ * Description: prints the alphabet in lowercase, and then in uppercase
  *
  *Return:0 (success)
  */
@@ -11,7 +11,7 @@ int main(void)
 {
 	int AZ;
 
-	for (AZ = 'a';AZ <= 'z';AZ++)
+	for (AZ = 'a'; AZ <= 'z'; AZ++)
 	{
 		putchar(AZ);
 	}
