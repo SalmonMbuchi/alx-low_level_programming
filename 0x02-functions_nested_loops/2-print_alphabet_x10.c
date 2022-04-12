@@ -6,12 +6,11 @@
  * Description: prints the alphabet ten times in lower case
  *
  * Return: 0
- * */
+ */
 void print_alphabet_x10(void)
 {
 	int rep = 0;
-	char c;
-	
+	char c;	
 	while (rep++ <= 9)
 	{
 		for (c = 'a'; c <= 'z'; c++)
@@ -19,5 +18,5 @@ void print_alphabet_x10(void)
 			_putchar (c);
 		}
 	_putchar ('\n');
-	}	
+	}
 }
