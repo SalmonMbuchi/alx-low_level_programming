@@ -9,6 +9,10 @@
  */
 int main(void)
 {
-	print_alphabet();
+	char c;
+	for (c = 'a'; c <= 'z'; c++)
+		print_alphabet("%c", c);
+
+	_putchar('\n');
 	return (0);
 }
