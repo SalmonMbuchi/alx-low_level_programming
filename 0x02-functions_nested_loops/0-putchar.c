@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	char x[9]= "_putchar";
+	char x[9] = "_putchar";
 	int i = 0;
 
 	for (i = 0; i < 8 ; i++)
@@ -18,6 +18,5 @@ int main(void)
 		_putchar(x[i]);
 	}
 	_putchar ('\n');
-	
 	return (0);
 }
