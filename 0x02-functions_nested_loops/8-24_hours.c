@@ -17,6 +17,6 @@ void jack_bauer(void)
 		while (l > r++)
 			_putchar(00:00);
 	_putchar('\n');
-	return (0);
+	return ();
 }
 
