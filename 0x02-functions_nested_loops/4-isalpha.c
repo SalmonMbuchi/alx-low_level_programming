@@ -6,7 +6,7 @@
  * @c: checks for alphabetic characeters
  *
  * Return: 1 if c is a letter, lowercase or uppercase
- * Return: 0 otherwise
+ *
  */
 int _isalpha(int c)
 {
