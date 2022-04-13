@@ -5,9 +5,8 @@
  * Description: adds two integers and returns the result
  * Return: always 0
  */
-int add(int, int)
+int add(int m, int n)
 {
-	int m, n, sum;
 	sum = add (m,n);
 
 	return (sum);
