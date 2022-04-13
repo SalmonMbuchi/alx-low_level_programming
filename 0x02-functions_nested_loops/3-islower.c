@@ -15,9 +15,9 @@ int _islower(int c)
 
 	q = _islower('H');
 	_putchar(q + '0');
-	q = _islower('c');
+	q = _islower(r);
 	_putchar(q + '0');
-	q = _islower('C');
+	q = _islower(w);
 	_putchar(q + '0');
 	_putchar('\n');
 	return (0);
