@@ -9,16 +9,11 @@
  */
 int _islower(int c)
 {
-	int q;
-	char r = 'c';
-	char w = 'C';
-
-	q = _islower('H');
-	_putchar(q + '0');
-	q = _islower(r);
-	_putchar(q + '0');
-	q = _islower(w);
-	_putchar(q + '0');
-	_putchar('\n');
-	return (0);
+	if (c >= 'a' && c <= 'z')
+	{
+		return (1);
+	else
+	{
+		return (0);
+	}
 }
