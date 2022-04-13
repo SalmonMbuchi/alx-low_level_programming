@@ -5,15 +5,18 @@
  *
  * Description: checks if c is lowercase or not
  *
- * Return 1(success) or (0) fail
+ * Return 1(success)
  */
-int main(void)
+int _islower(int c)
 {
-	char c = 'c';
+	int q;
 
-	if (c == 'c')
-		_putchar(1);
-	else if (c == 'C');
-		_putchar(0);
+	q = _islower('H');
+	_putchar(q + '0');
+	q = _islower('c');
+	_putchar(q + '0');
+	q = _islower('C');
+	_putchar(q + '0');
+	_putchar('\n');
 	return (0);
 }
