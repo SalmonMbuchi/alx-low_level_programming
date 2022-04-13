@@ -10,6 +10,8 @@
 int _islower(int c)
 {
 	int q;
+	char r = 'c';
+	char w = 'C';
 
 	q = _islower('H');
 	_putchar(q + '0');
