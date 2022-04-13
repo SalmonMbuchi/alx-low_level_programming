@@ -6,9 +6,8 @@
  *
  * Return: Always 0
  */
-int print_last_digit(int)
+int print_last_digit(int q)
 {
-	int q;
 	int lastNum;
 
 	lastNum = q % 10;
