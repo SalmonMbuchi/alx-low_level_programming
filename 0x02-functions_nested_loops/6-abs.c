@@ -4,7 +4,7 @@
  * _abs  - integer value
  *
  * Description: prints the absolute value of an integer
- *@n is an integer
+ *@n: is an integer
  *
  *Return: Integer
  */
