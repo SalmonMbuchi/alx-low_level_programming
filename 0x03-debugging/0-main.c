@@ -2,10 +2,7 @@
 
 /**
  *main - determine if number is positive or negative
- *
- *Description: checks whether a number is poditive, negative or zero
- *
- *Return: Always 0(Success)
+ *Return:0(Success)
  */
 int main(void)
 {
