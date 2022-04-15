@@ -5,12 +5,12 @@
  * print_numbers - prints numbers from 0 to 9
  * Return: 0
  */
-void print_numbers(void)
+int main(void)
 {
 	int i;
 
 	for (i = 0; i <= 9; i++)
-		print_numbers();
+		_putchar(i);
 	_putchar('\n');
-	return ();
+	return (0);
 }
