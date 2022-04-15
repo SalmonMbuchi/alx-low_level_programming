@@ -6,17 +6,17 @@
  *
  * Return: Always 0
  */
-int main(void)
+int _isupper(int c)
 {
-	char c;
+	/*int c;*/
 
-	if (c >= 'a' && c <= 'z')
-	{	
-		putchar(0);
-	}	
 	if (c >= 'A' && c <= 'Z')
-	{	
-		putchar(1);
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
 	}
 	return (0);
 }
