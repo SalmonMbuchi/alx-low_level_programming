@@ -6,9 +6,9 @@
  */
 void more_numbers(void)
 {
-	int c, h = '0';
+	int c;
 
-	while (h <= '10')
+	while (c <= '10')
 	{
 		c = '0';
 		while (c <= '14')
