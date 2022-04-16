@@ -10,7 +10,9 @@ void print_numbers(void)
 	int i = 0;
 
 	while (i >= 0 && i <= 9)
+	{
 		print_numbers();
 		i++;
+	}
 	_putchar('\n');
 }
