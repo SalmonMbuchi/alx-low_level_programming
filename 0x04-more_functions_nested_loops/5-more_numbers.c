@@ -8,13 +8,11 @@ void more_numbers(void)
 {
 	int c;
 
-	while (c <= '10')
+	for (c = 0; c <= 10; c++)
 	{
-		c = '0';
-		while (c <= '14')
+		for (c = 0; c <= 14; c++)
 		{
 			_putchar(c);
-			c++;
 		}
 	_putchar(c);
 	}
