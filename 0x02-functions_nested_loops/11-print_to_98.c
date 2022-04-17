@@ -18,10 +18,10 @@ void print_to_98(int n)
 			printf(", ");
 			n++;
 		if (n == 98)
-			continue;
+			break;
 		}
 	}	
-	if (n >= 98)
+	if (n > 98)
 	{
 		while (n >= 98)
 		{
