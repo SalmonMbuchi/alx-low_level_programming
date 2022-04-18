@@ -9,6 +9,8 @@ void print_triangle(int size)
 {
 	int rowNum, space, symbol;
 
+	if (size < 0)
+		_putchar('\n');
 	for (rowNum = 1; rowNum <= size; rowNum++)
 	{
 		for (space = 1; space == size - rowNum; space++)
