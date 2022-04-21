@@ -5,7 +5,7 @@
  * return: void
  */
 void _puts(char *str)
-{
+{	
 	_puts(char *str);
 	/*_puts ('\n');*/
 }
