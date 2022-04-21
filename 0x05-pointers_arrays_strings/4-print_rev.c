@@ -6,7 +6,7 @@
  */
 void print_rev(char *s)
 {
-	int length = strlen(s);
+	int length = _strlen(s);
 	int i;
 
 	for (i = length - 1; i >= 0; i--)
@@ -14,7 +14,7 @@ void print_rev(char *s)
 		if (s[i] == ' ')
 		{
 			s[i] = '\0';
-			_putchar("%s", &(s[i]) + 1);
+			write("%s", &(s[i]) + 1);
 		}
 	}
 	_putchar("%s", s);
