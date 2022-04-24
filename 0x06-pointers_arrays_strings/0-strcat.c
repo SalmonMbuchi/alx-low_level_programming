@@ -7,19 +7,21 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int i, h;
+	int length;
+	int k;
 
-	i = 0;
-	while (dest[i] != '\0')
+	length = 0;
+	while (dest[length] != '\0')
 	{
-		++i;
+		++dest;
 	}
-	for (h = 0; src[h] != '\0'; ++h, ++i)
-	{
-		dest[i] = src[h];
-	}
-	*src = '\0';
 
-	_putchar(*dest);
+	for (j = 0; src[k] != '\0'; ++k, ++length)
+	{
+		dest[length] = src[k];
+	}
+
+	dest[length] = '\0';
+
 	return (dest);
 }
