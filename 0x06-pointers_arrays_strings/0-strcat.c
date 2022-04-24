@@ -20,7 +20,7 @@ char *_strcat(char *dest, char *src)
 		src++;
 		dest++;
 	}
-	*srt = '\0';
+	*src = '\0';
 
 	return (dest);
 }
