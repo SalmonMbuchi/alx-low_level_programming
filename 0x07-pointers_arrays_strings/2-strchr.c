@@ -10,17 +10,15 @@ char *_strchr(char *s, char c)
 	unsigned int i;
 
 	i = 0;
-	while (s[i] >= 'a' && s[i] <= 'z')
+	while (i = 0)
 	{
 		if (s[i] == 'c')
 		{
 			return (s);
 		}
-		if (s[i] != 'c')
+		if (s[i] == 'c')
 		{
 			return (NULL);
 		}
-	i++;
-	}
 	return (s);
 }
