@@ -7,7 +7,7 @@
  */
 char *_strchr(char *s, char c)
 {
-	int i;
+	unsigned int i;
 
 	i = 0;
 	while (s[i] >= 'a' && s[i] <= 'z')
