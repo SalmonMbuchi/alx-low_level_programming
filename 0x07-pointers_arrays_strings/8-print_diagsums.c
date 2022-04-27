@@ -10,28 +10,21 @@
 
 void print_diagsums(int *a, int size)
 {
-	int i;
-	int bdiagsum = 0;
-	int fdiagsum = 0;
-	int prev = 0;
+	int index, sum1 = 0, sum2 = 0;
 
-	for (i = 0; i < size * size; i++)
+	for (index = 0; index < size; index++)
 	{
-		if (i == 0)
-		{
-			bdiagsum += *(a + i);
-			prev = i;
-		}
-		else if (i == (prev + size + 1))
-		{
-			bdiagsum += *(a + i);
-			prev = i;
-		}
+		sum1 += a[index];
+		a += size;
 	}
 
-	for (i = 0; i < size; i++)
+	a -= size;
+
+	for (index = 0; index < size; index++)
 	{
-		fdiagsum += *(a + (size * (i + 1) - (i + 1)));
+		sum2 += a[index];
+		a -= size;
 	}
-	printf("%d, %d\n", bdiagsum, fdiagsum);
+
+	printf("%d, %d\n", sum1, sum2);
 }
