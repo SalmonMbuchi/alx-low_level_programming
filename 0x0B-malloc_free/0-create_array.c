@@ -10,6 +10,7 @@
 char *create_array(unsigned int size, char c)
 {
 	char *ptr;
+	unsigned int i;
 
 	while (1)
 	{
@@ -19,6 +20,11 @@ char *create_array(unsigned int size, char c)
 			return (NULL);
 		}
 		*ptr = c;
+
+		for (i = 0; i < size; i++)
+		{
+			_putchar(ptr[i]);
+		}
 		free(ptr);
 	}
 	return (ptr);
