@@ -10,6 +10,7 @@
 int main(int argc, char *argv[])
 {
 	printf("%d", argc);
+	_putchar('\n');
 
 	return (0);
 }
