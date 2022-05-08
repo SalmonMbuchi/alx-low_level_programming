@@ -7,8 +7,10 @@
  * @argv: an array of command line arguments
  * Return: 0
  */
-int main(__attribute__((unused))int argc, char *argv[])
+int main(int argc, __attribute__((unused)) char *argv[])
 {
-	printf("%d\n", argc);
+	int f = argc -1; /**because argc starts at index 0*/	
+
+	printf("%d\n", f);
 	return (0);
 }
