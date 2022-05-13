@@ -6,10 +6,10 @@
  * @owner: pointer to a char that stores the address of the string literal
  * @age: float
  */
-typedef struct dog dog_t
+typedef struct dog
 {
 	char *name;
 	char *owner;
 	float age;
-};
+}dog_t;
 #endif
