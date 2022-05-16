@@ -7,19 +7,10 @@
  * @f: function pointer
  * Return: void
  */
-void name_is(char *name)
-{
-	unsigned int i = 0;
-
-	while (i < strlen(name))
-	{
-		_putchar(name[i]);
-		i++;
-	}
-}
 void print_name(char *name, void (*f)(char *))
 {
-	f = name_is;
+	if (f == NULL)
+		return;
 
 	(f)(name);
 }
