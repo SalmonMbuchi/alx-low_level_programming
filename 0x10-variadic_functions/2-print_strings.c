@@ -35,14 +35,14 @@ void print_strings(const char *separator, const unsigned int n, ...)
 				if (i == n - 1)
 					printf("%s\n", strings);
 				else
-					printf("%s", strings);
+					printf("%s, ", strings);
 			}
 			if (separator != NULL)
 			{
 				if (i == n - 1)
 					printf("%s\n", strings);
 				else
-					printf("%s%s", strings, separator);
+					printf("%s, %s, ", strings, separator);
 			}
 		}
 	}
