@@ -19,32 +19,21 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	if (n == 0)
 		_putchar('\n');
-	if (n != 0)
+	for (i = 0; i < n; i++)
 	{
-		for (i = 0; i < n; i++)
+		if (strings == NULL)
 		{
-			if (strings == NULL)
-			{
-				if (i == n - 1)
-					printf("(nil)\n");
-				else
-					printf("(nil)");
-			}
-			if (separator == NULL)
-			{
-				if (i == n - 1)
-					printf("%s\n", strings);
-				else
-					printf("%s, ", strings);
-			}
-			if (separator != NULL)
-			{
-				if (i == n - 1)
-					printf("%s\n", strings);
-				else
-					printf("%s, %s, ", strings, separator);
-			}
+			strings = "(nil)";
 		}
+		if (i != n - 1)
+		{
+			if (separator == NULL)
+				printf("%s", strings);
+			else
+				printf("%s%s", strings, separator);
+		}
+		else
+			printf("%s\n", strings);
 	}
 	va_end(ap1);
 }
