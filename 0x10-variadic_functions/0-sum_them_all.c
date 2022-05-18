@@ -16,6 +16,7 @@ int sum_them_all(const unsigned int n, ...)
 		return (0);
 
 	va_start(aps, n); /*va_start is called with two arguments*/
+
 	sum = 0;
 	for (i = 0; i < n; i++)
 	{
