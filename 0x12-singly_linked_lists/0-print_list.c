@@ -15,7 +15,7 @@ size_t print_list(const list_t *h)
 	{
 		n++;
 		if (h->str != NULL)
-			printf("[%d] (%s)\n", h->len, h->str);
+			printf("[%d] %s\n", h->len, h->str);
 		else
 			printf("[0] (nil)\n");
 		h = h->next;  /*go to the address of the next node*/
