@@ -11,7 +11,7 @@ int _strlen(char *s)
 	while (s[i] != '\0')
 		i++;
 
-	return(i);
+	return (i);
 }
 /**
  * create_file  - creates a file
@@ -22,22 +22,26 @@ int _strlen(char *s)
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
-	int length;
-	ssize_t bytes_read;
+	unsigned int length;
+	ssize_t letters_written;
 
 	if (filename == NULL)
 		return (-1);
-	fd = open(filename, O_CREAT | O_RDONLY, 0600);
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+	if (fd == -1)
+		return (-1);
 
 	if (text_content == NULL)
-		return (-1);
-	length = _strlen(text_content) + 1;
+	{
+		length = 0;
+		text_content = "";
+	}
+	else
+		length = _strlen(text_content);
 
-	bytes_read = read(fd, text_content, length);
-	if (bytes_read == -1)
+	letters_written = write(fd, text_content, length);
+	if (letters_written == -1)
 		return (-1);
-
-	write(fd, text_content, bytes_read);
 	close(fd);
 
 	return (1);
