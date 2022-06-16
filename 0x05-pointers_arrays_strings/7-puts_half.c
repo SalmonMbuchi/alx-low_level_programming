@@ -6,19 +6,21 @@
  */
 void puts_half(char *str)
 {
-	int i, j, max;
+	int len = 1, i, n;
 
-	i = 0;
-	while (str[i] != '\0')
+	/* get the length of the string */
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		i++;
+		len++;
 	}
-	max = i;
-	j = max / 2;
-	while (j <= max)
+	/* check if length is even or odd */
+	if (len % 2 == 0)
+		n = len / 2;
+	else
+		n = (len / 2) - 1;
+	for (i = n; i < len; i++)
 	{
-		_putchar(str[j]);
-		j++;
+		_putchar(str[i]);
 	}
 	_putchar('\n');
 }
