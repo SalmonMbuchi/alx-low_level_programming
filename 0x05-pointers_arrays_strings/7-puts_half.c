@@ -6,7 +6,7 @@
  */
 void puts_half(char *str)
 {
-	int len = 1, i, n;
+	int len = 0, i, n;
 
 	/* get the length of the string */
 	for (i = 0; str[i] != '\0'; i++)
