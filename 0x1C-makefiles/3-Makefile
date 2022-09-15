@@ -1,0 +1,19 @@
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:%.c=%.o)
+NAME = school
+RM = rm -f
+all: ${OBJ}
+	${CC} ${OBJ} -o ${NAME}
+clean:
+	# deletes all Emacs and Vim temp files along with the executable
+	${RM} *~ ${NAME}
+oclean:
+	# deletes the object files
+	${RM} ${OBJ}
+fclean:
+	# deletes all Emacs and Vim temporary files, the executable
+	# and object files
+	# alt answer: clean oclean
+	${RM} *~ ${NAME} ${OBJ}
+re: fclean all
