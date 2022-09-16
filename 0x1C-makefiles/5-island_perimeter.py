@@ -13,8 +13,8 @@ def island_perimeter(grid):
         for j in range(len(grid[i])):
             if grid[i][j] == 1:
                 perimeter += 4
-                if grid[i - 1][j] == 1:
+                if (i > 0 && grid[i - 1][j]) == 1:
                     perimeter -= 2
-                if grid[i][j - 1] == 1:
+                if (j > 0 && grid[i][j - 1] == 1):
                     perimeter -= 2
     return perimeter
