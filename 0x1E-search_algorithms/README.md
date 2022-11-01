@@ -18,7 +18,6 @@ size is the number of elements in array
 - If value is not present in array or if array is NULL, your function must return -1
 - Every time you compare a value in the array to the value you are searching, you have to print this value (see example below)
 
-
 **1.Binary search**: [1-binary.c](./1-binary.c)
 
 Write a function that searches for a value in a sorted array of integers using the Binary search algorithm
@@ -32,7 +31,6 @@ Write a function that searches for a value in a sorted array of integers using t
 - You can assume that value won’t appear more than once in array
 - If value is not present in array or if array is NULL, your function must return -1
 - You must print the array being searched every time it changes. (e.g. at the beginning and when you search a subarray) (See example)
-
 
 **2.Big O #0**: [2-O](./2-O)
 

@@ -20,6 +20,7 @@ int binary_search(int *array, size_t size, int value)
 
     while (i <= j)
     {
+
       printf("Searching in array: ");
       while (i <= j)
       {
@@ -36,12 +37,12 @@ int binary_search(int *array, size_t size, int value)
       {
         i = m + 1;
       }
-      else if (array[m] == value)
+      else if (array[m] > value)
       {
-        return (m);
+        j = m - 1;
       }
       else
-        j = m - 1;
+        return (m);
       m = ((i + j) / 2);
     }
   }
