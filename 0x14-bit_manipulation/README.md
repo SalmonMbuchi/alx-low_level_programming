@@ -1,17 +1,65 @@
-## BITWISE OPERATIONS IN C
+# C - Bit manipulation
 
-This project deals with bitwise operators, their application and use cases in real life. A bitwise operation operates on a bit-string, a bit array or a binary numeral at the level of its individual bits.
+In this project, I learned how to manipulate bits and use the
+bitwise operators `>>`, `<<`, `&`, `|`, and `^` in C.
 
-Bitwise operators in C include:
+## Helper File :raised_hands:
 
-1. NOT(~): It is a unary operation that performs logical negation on each bit i.e. it flips the bits that are 0 become 1 and viceversa.
+* [_putchar.c](./_putchar.c): C function that writes a character to `stdout`.
 
-2. AND(&): It is a binary operation that takes two equal-length binary representations  and performs the logical AND operation on each pair of corresponding bits. If both bits compared in the compared position are 1, the result is 1, otherwise, the result is 0.
+## Header File :file_folder:
 
-3. OR(|): It is a binary operation that takes two bit patterns of equal length and performs the logical inclusive OR operation on each pair of corresponding bits. If both bits compared are 0, the result is 0, otherwise the result is 1.
+* [main.h](./main.h): Header file containing prototypes for all
+functions written in the project.
 
-4. XOR(^): It is a binary operation that takes two bit patterns of equal length. The result in each position is 1 of only one of the bits is 1, but will be 0 if both are 0 or both are 1.
+| File                   | Prototype                                                           |
+| ---------------------- | ------------------------------------------------------------------- |
+| `0-binary_to_uint.c`   | `unsigned int binary_to_uint(const char *b);`                       |
+| `1-print_binary.c`     | `void print_binary(unsigned long int n);`                           |
+| `2-get_bit.c`          | `int get_bit(unsigned long int n, unsigned int index);`             |
+| `3-set_bit.c`          | `int set_bit(unsigned long int *n, unsigned int index);`            |
+| `4-clear_bit.c`        | `int clear_bit(unsigned long int *n, unsigned int index);`          |
+| `5-flip_bits.c`        | `unsigned int flip_bits(unsigned long int n, unsigned long int m);` |
+| `100-get_endianness.c` | `int get_endianness(void);`                                         |
 
-5. Left Shift Operator(<<): The left operands value is moved left by the number of bits specified by the right operand.
+## Tasks :page_with_curl:
 
-6. Right Shift Operator(>>): The left operands value is moved right by the number of bits specified by the right operand.
+* **0. 0**
+  * [0-binary_to_uint.c](./0-binary_to_uint.c): C function that converts a binary number
+  to an `unsigned int`.
+  * The parameter `b` is a pointer to a string of `0` and `1` characters.
+  * If `b` is `NULL` or there are one or more characters in `b` that are
+  not `0` or `1` - returns `0`.
+  * Otherwise - returns the converted number.
+
+* **1. 1**
+  * [1-print_binary.c](./1-print_binary.c): C function that prints the binary representation
+  of a number.
+
+* **2. 10**
+  * [2-get_bit.c](./2-get_bit.c): C function that returns the value of a bit at a
+  given index.
+  * Indices start at `0`.
+  * If an error occurs - returns `-1`.
+  * Otherwise - returns the value of the bit at the given index.
+
+* **3. 11**
+  * [3-set_bit.c](./3-set_bit.c): C function that sets the value of a bit at a given index
+  to `1`.
+  * If an error occurs - returns `-1`.
+  * Otherwise - returns `1`.
+
+* **4. 100**
+  * [4-clear_bit.c](./4-clear_bit.c): C function that sets the value of a bit at
+  a given index to `0`.
+  * If an error occurs - returns `-1`.
+  * Otherwise - returns `1`.
+
+* **5. 101**
+  * [5-flip_bits.c](./5-flip_bits.c): C function that returns the number of bits needed
+  to be flipped to get from one number to another.
+
+* **6. Endianness**
+  * [100-get_endianness.c](./100-get_endianness.c): C function that checks the endianness.
+  * If big-endian - returns `0`.
+  * If little-endian - returns `1`.
