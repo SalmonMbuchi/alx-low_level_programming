@@ -1,24 +1,97 @@
-# HASHTABLES
+# C - Hash tables
 
-In computing, a hash table, also known as hash map or dictionary, is a data structure that implements a set abstract data type, a structure that can map keys to values. A hash table uses a hash function to compute an index, also called a hash code, into an array of buckets or slots, from which thedesired value can be found. During lookup, the key is hashed and the resulting hash indicates where the corresponding value is stored.
+In this project, I learned about hashing by implementing hash functions
+and hash tables in C.
 
-Ideally, the hash function will assign each key to a unique bucket, but most hash table designs employ an imperfect hash function, which might cause hash collisions where the hash function generates the same index for more than one key. Such collisions are typically accommodated in some way.
+## Header File :file_folder:
 
-In a well-dimensioned hash table, the average time complexity for each lookup is independent of the number of elements stored in the table. Many hashtable designs also allow arbitrary insertions and deletions of key–value pairs, at amortized constant average cost per operation.
+* [hash_tables.h](./hash_tables.h): Header file containing definitions and prototypes for
+all types and functions written for the project.
 
-Hashing is an example of a space-time tradeoff. If memory is infinite, the entire key can be used directly as an index to locate its value with a 
-single memory access. On the other hand, if infinite time is available, values can be stored without regard for their keys, and a binary search or linear search can be used to retrieve the element.
+Data Structures:
+```
+typedef struct hash_node_s
+{
+	char *key;
+	char *value;
+	struct hash_node_s *next;
+} hash_node_t;
 
-In many situations, hash tables turn out to be on average more efficient than search trees or any other table lookup structure. For this reason, theyare widely used in many kinds of computer software, particularly for associative arrays, database indexing, caches, and sets.
+typedef struct hash_table_s
+{
+	unsigned long int size;
+	hash_node_t **array;
+} hash_table_t;
 
-## Hash Functions
+typedef struct shash_node_s
+{
+	char *key;
+	char *value;
+	struct shash_node_s *next;
+	struct shash_node_s *sprev;
+	struct shash_node_s *snext;
+} shash_node_t;
 
-A hash function is any function that can be used to map data of arbitrary size to fixed-size values.The values returned by a hash function are called hash values, hash codes, digests, or simply hashes. The values are usually used to index a fixed-size table called a hash table. Use of a hash function to index a hash table is called hashing or scatter storage addressing.
+typedef struct shash_table_s
+{
+	unsigned long int size;
+	shash_node_t **array;
+	shash_node_t *shead;
+	shash_node_t *stail;
+} shash_table_t;
+```
 
-Hash functions and their associated hash tables are used in data storage and retrieval applications to access data in a small and nearly constant
-time per retrieval. They require an amount of storage space only fractionally greater than the total space required for the data or records themselves. Hashing is a computationally and storage space-efficient form of data access that avoids the non-constant access time of ordered and unordered lists and structured trees, and the often exponential storage requirements of direct access of state spaces of large or variable-length keys.
+Function Prototypes:
 
-Use of hash functions relies on statistical properties of key and function interaction: worst-case behaviour is intolerably bad with a vanishingly small probability, and average-case behaviour can be nearly optimal (minimal collision).
+| File | Prototype |
+| --- | --- |
+| `0-hash_table_create.c` | `hash_table_t *hash_table_create(unsigned long int size);` |
+| `1-djb2.c` | `unsigned long int hash_djb2(const unsigned char *str);` |
+| `2-key_index.c` | `unsigned long int key_index(const unsigned char *key, unsigned long int size);` |
+| `3-hash_table_set.c` | `int hash_table_set(hash_table_t *ht, const char *key, const char *value);` |
+| `4-hash_table_get.c` | `char *hash_table_get(const hash_table_t *ht, const char *key);` |
+| `5-hash_table_print.c` | `void hash_table_print(const hash_table_t *ht);` |
+| `6-hash_table_delete.c` | `void hash_table_delete(hash_table_t *ht);` |
+| `100-sorted_hash_table.c` | `shash_table_t *shash_table_create(unsigned long int size);` |
+| | `int shash_table_set(shash_table_t *ht, const char *key, const char *value);` |
+| | `char *shash_table_get(const shash_table_t *ht, const char *key);` |
+| | `void shash_table_print(const shash_table_t *ht);` |
+| | `void shash_table_print_rev(const shash_table_t *ht);` |
+| | `void shash_table_delete(shash_table_t *ht);` |
 
-Hash functions are related to (and often confused with) checksums, check digits, fingerprints, lossy compression, randomization functions, error-correcting codes, and ciphers. Although the concepts overlap to some extent, each one has its own uses and requirements and is designed and optimized differently. The hash function differs from these concepts mainly in terms of data integrity.
+## Tasks :page_with_curl:
 
+* **0. >>> ht = {}**
+  * [0-hash_table_create.c](./0-hash_table_create.c): C function that creates a `hash_table_t`
+  hash table.
+    * If the function fails - returns `NULL`.
+    * Otherwise - returns a pointer to the new hash table.
+
+* **1. djb2**
+  * [1-djb2.c](./1-djb2.c): C function that implements the djb2 hashing algorithm.
+
+* **2. key -> index**
+  * [2-key_index.c](./2-key_index.c): C function that returns the index at which a key/value
+  pair should be stored in the array of a `hash_table_t` hash table.
+
+* **3. >>> ht['betty'] = 'holberton'**
+  * [3-hash_table_set.c](./3-hash_table_set.c): C function that adds an element to a
+  `hash_table_t` table.
+    * The parameter `key` cannot be an empty string.
+    * Returns `1` on success, `0` otherwise.
+
+* **4. >>> ht['betty']**
+  * [4-hash_table_get.c](./4-hash_table_get.c): C function that retrieves a value associated
+  with a key in a `hash_table_t` hash table.
+    * If `key` cannot be matched - returns `NULL`.
+    * Otherwise - returns the value associated with `key`.
+
+* **5. >>> print(ht)**
+  * [5-hash_table_print.c](./5-hash_table_print.c): C function that prints a `hash_table_t`
+  hash table.
+    * Prints each `key`/`value` pair in the order they appear in the array of the hash table.
+    * Does not print anything if the hash table is `NULL`.
+
+* **6. >>> del ht**
+  * [6-hash_table_delete.c](./6-hasb_table_delete.c): C function that deletes a
+  `hash_table_t` hash table.
